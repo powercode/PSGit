@@ -60,7 +60,7 @@ function SetPSGit {
     [CmdletBinding()]
     param()
 
-    if(Get-Command Add-PowerLineBloc[k]) {
+    if(Get-Command PowerLine\Add-PowerLineBlock -ErrorAction Ignore) {
         Add-PowerLineBlock { Write-GitStatusPowerLine } -AutoRemove
     } else {
         Write-Warning "Modifying `$Prompt list. Ensure you have a prompt function that invokes it's ScriptBlocks."
