@@ -4,7 +4,7 @@
 RootModule = 'PSGit.psm1'
 
 # Version number of this module.
-ModuleVersion = '2.1.2'
+ModuleVersion = '2.1.3'
 
 # ID used to uniquely identify this module
 GUID = 'df52529c-a328-4ee1-b52c-839646292588'
@@ -61,16 +61,28 @@ FormatsToProcess = @("PSGit.formats.ps1xml")
 # NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = '*'
+FunctionsToExport = @(
+    'Get-RootFolder'
+    'Get-Change'
+    'Get-Info'
+    'Get-Branch'
+    'Get-Status'
+    'Show-Status'
+    'New-Repository'
+    'Write-StatusPowerLine'
+    'Set-PromptSetting'
+    'Write-Text'
+    'Write-Status'
+)
 
 # Cmdlets to export from this module
-CmdletsToExport = '*'
+CmdletsToExport = ''
 
 # Variables to export from this module
-VariablesToExport = '*'
+VariablesToExport = ''
 
 # Aliases to export from this module
-AliasesToExport = '*'
+AliasesToExport = 'Set-PromptSettings', 'Branch', 'Status'
 
 # DSC resources to export from this module
 # DscResourcesToExport = @()
